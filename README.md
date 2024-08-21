@@ -1,6 +1,3 @@
 # ANALYSIS-OF-GREEK-AIRBNB-LISTINGS-IN-POWERBI
-##Airbnb Listings & Reviews
-
-#ABOUT THE DATASET
-
-###Data Files
+## ABOUT THE DATASET
+### Data Files
