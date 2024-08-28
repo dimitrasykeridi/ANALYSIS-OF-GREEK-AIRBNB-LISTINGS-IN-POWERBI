@@ -25,4 +25,15 @@ http://creativecommons.org/licenses/by/4.0/
     * Listings and rooms type tables linked together by room_id
     * Listings and properties type tables linked together by property_id
     * Listings and reviews table linked together by listing_id
+      
+
+
+
+
+
+
+
+
+
+
   
