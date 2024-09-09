@@ -74,11 +74,22 @@ The purpose of this project is to create a DashBoard from 2 CSV files related wi
 
 To sum up the findings of this project:
 
+* The Average price per night for an Airbnb listing is 110€.
+
 * The ideal month for the app to increase prices is September due to the rise of the listings.
+
+* After Airbnb’s official launch in 2008, 2011,2018,2021 seem to be the  years that the average price of an Airbnb increased.
 
 * Εμπορικό Τρίγωνο-Πλάκα seems to have the highest numbers of listings and a price only 30 € more than the average price of an Airbnb.
 
-* Ρηγίλλης might be the city with the highest average price, but at the same time it ranks as the top reviewed for location.
+* Ρηγίλλης might be the city with the highest average price - The average price of an Airbnb listing in Ρηγίλλης is 368€- , but at the same time it ranks as the top reviewed for location.
+
+* Κουκάκι-Μακρυγιάννη is the city with the highest average score among the top 10 cities in reviews for listings. The check-in process, communication, cleanliness and accuracy seem to work well in listings for 
+  this area.
+
+* The highest number of total reviews by city belongs to Εμπορικό Τρίγωνο-Πλάκα with 9,704 reviews. 
+  
+* We noticed that the highest number of reviews is on May. On July we had the lowest number of reviews.
 
 * Entire apartments undoubtly have more listings on the app, since they combine comfort and lower prices.
 
