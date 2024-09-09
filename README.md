@@ -24,14 +24,19 @@ http://creativecommons.org/licenses/by/4.0/
 
 ### Data Cleaning 
 The first step in the data cleaning process was correcting data types. Latitude, longitude, and review score columns were converted to float for accurate calculations, while beds and bedrooms were changed to integer to reflect counts. Additionally, host-related columns like host_response_rate and host_acceptance_time were converted to float, while host_response_time, host_has_profile_pic, and host_identity_verified were changed to text. 
+
 The second step in the data cleaning process was to replace null values. In the Dimhost table, null values in the host_name and host_location columns were replaced with "Unknown". In the host_response_time column, null values were replaced with "N/A". For the columns host_is_superhost, host_identity_verified, and host_has_profile_pic in the Dimhost table and for the column instant_bookable in the FactListings table, null values were handled by mapping false to 0 and true to 1.
+
 Final step in the data cleaning process was to extract the bathrooms column from the original bathrooms_text column. This was done by extracting the text before the space character, which served as the delimiter.
 
 ### Data Transformations
 Using PowerQuery, we created our first measure called NumberofHosts, which helps us determine the number of accommodations included in the project. For illustration, we used the COUNTROWS function as follows:
 COUNTROWS(DimHost).
+
 Secondly, we created a DAX Measure called Pricing_Listing where we calculated the overall pricing of accommodations where hosts are located in Κουκάκι-Μακρυγιάννη, one of the most popular neighborhoods in Athens.Dax Syntax : CALCULATE(SUM(FactListings[price]),FactListings[city_location]="Κουκακι-Μακρυγιαννη"))
+
 To complete the transformations in PowerQuery, we created two conditional columns for more detailed analysis. The first column, called is_shared, was created to determine if the majority of bathrooms were shared.  The column was set up using the Add Column feature in PowerQuery View, with the following syntax: if bathrooms_text contains shared then 1 else 0. 
+
 To conclude, we created a second conditional column called Price Category, which categorizes prices based on their value. The column was set up with the following syntax
 
 ### Data Modelling 
