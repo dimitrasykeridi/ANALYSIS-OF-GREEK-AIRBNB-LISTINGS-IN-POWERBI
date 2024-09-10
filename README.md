@@ -32,14 +32,14 @@ The second step in the data cleaning process was to replace null values. In the 
 Final step in the data cleaning process was to extract the bathrooms column from the original bathrooms_text column. This was done by extracting the text before the space character, which served as the delimiter.
 
 ### Data Transformations
-Using PowerQuery, we created our first measure called NumberofHosts, which helps us determine the number of accommodations included in the project. For illustration, we used the COUNTROWS function as follows:
+Using PowerQuery, we created our first DAX measure called NumberofHosts, which helps us determine the number of accommodations included in the project. For illustration, we used the COUNTROWS function as follows:
 COUNTROWS(DimHost).
 
 Secondly, we created a DAX Measure called Pricing_Listing where we calculated the overall pricing of accommodations where hosts are located in Κουκάκι-Μακρυγιάννη, one of the most popular neighborhoods in Athens.Dax Syntax : CALCULATE(SUM(FactListings[price]),FactListings[city_location]="Κουκακι-Μακρυγιαννη"))
 
 To complete the transformations in PowerQuery, we created two conditional columns for more detailed analysis. The first column, called is_shared, was created to determine if the majority of bathrooms were shared.  The column was set up using the Add Column feature in PowerQuery View, with the following syntax: if bathrooms_text contains shared then 1 else 0. 
 
-To conclude, we created a second conditional column called Price Category, which categorizes prices based on their value. The column was set up with the following syntax
+To conclude, we created a second conditional column called Price Category, which categorizes prices based on their value. The column was set up with the following syntax:  if [price] < 100 then "cheap" else if [price] = 200 then "mid-range" else "expensive".
 
 ### Data Modelling 
 At the start of the data modeling process, we verified in the model view that all data types were correct and ensured that countable measures had the appropriate symbols. We then checked that the host_response_rate and host_acceptance_rate columns were formatted as percentages. Additionally, we added data categories to columns such as latitude, longitude, and city_location (with the data category city), and host_location (with the data category place). For columns like latitude, longitude, host_acceptance_rate, host_response_rate, maximum_nights, and minimum_nights, we also included further descriptions.
